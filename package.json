@@ -4,7 +4,7 @@
   "main": "lib/index.js",
   "description": "Lightweight command-line tool argument processing package",
   "scripts": {
-    "test": "mocha test/**/*-spec.js"
+    "test": "istanbul cover _mocha -- test/**/*-spec.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
   "homepage": "https://github.com/shamasis/miniargs",
   "devDependencies": {
     "expect.js": "^0.3.1",
+    "istanbul": "^0.3.8",
     "mocha": "^2.2.1"
   }
 }
