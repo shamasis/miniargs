@@ -4,7 +4,7 @@
   "main": "lib/index.js",
   "description": "Lightweight command-line tool argument processing package",
   "scripts": {
-    "test": "istanbul cover _mocha -- test/**/*-spec.js"
+    "test": "jscs lib test && jshint lib test && istanbul cover _mocha -- test/**/*-spec.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,8 @@
   "devDependencies": {
     "expect.js": "^0.3.1",
     "istanbul": "^0.3.8",
+    "jscs": "^1.11.3",
+    "jshint": "^2.6.3",
     "mocha": "^2.2.1"
   }
 }
