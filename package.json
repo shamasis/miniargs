@@ -1,0 +1,27 @@
+{
+  "name": "miniargs",
+  "version": "0.0.0",
+  "main": "lib/index.js",
+  "description": "Lightweight command-line tool argument processing package",
+  "scripts": {
+    "test": "mocha test/**/*-spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://shamasis@github.com/shamasis/miniargs.git"
+  },
+  "keywords": [
+    "cli",
+    "argument"
+  ],
+  "author": "Shamasis Bhattacharya <mail@shamasis.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shamasis/miniargs/issues"
+  },
+  "homepage": "https://github.com/shamasis/miniargs",
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^2.2.1"
+  }
+}
