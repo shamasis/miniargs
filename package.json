@@ -1,0 +1,30 @@
+{
+  "name": "miniargs",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "description": "Lightweight command-line tool argument processing package",
+  "scripts": {
+    "test": "jscs lib test && jshint lib test && istanbul cover _mocha -- test/**/*-spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://shamasis@github.com/shamasis/miniargs.git"
+  },
+  "keywords": [
+    "cli",
+    "argument"
+  ],
+  "author": "Shamasis Bhattacharya <mail@shamasis.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shamasis/miniargs/issues"
+  },
+  "homepage": "https://github.com/shamasis/miniargs",
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "istanbul": "^0.3.8",
+    "jscs": "^1.11.3",
+    "jshint": "^2.6.3",
+    "mocha": "^2.2.1"
+  }
+}
