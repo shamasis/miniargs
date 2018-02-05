@@ -1,5 +1,14 @@
 language: node_js
 
-# test on two node.js versions: 0.6 and 0.8
 node_js:
-  - 0.10
+    - 0.12.0
+
+deploy:
+  provider: npm
+  email: mail@shamasis.net
+  api_key:
+    secure: mpY3D6oAl34PPA2NxfMIX4rShHo01pKNk+58h8MdM3ONEwyq6lsyQY7yANLeZzS/Q02HbeY5yECek1TEPAmhI9UUjuN1bBj3jZ8Qx7r/GyrJy82uWSfnzhc0Ez6Uro5SS8HlZV1Y6DK4zFQo7xH17X04rShFkjz4U2oNKmP3w5A=
+  on:
+    tags: true
+    repo: shamasis/miniargs
+    branch: master
