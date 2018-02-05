@@ -1,21 +1,15 @@
-/* global describe, it */
-var expect = require('expect.js'),
-miniargs;
+/* global describe, it, beforeEach, afterEach */
+var expect = require('expect.js');
 
 describe('miniargs', function () {
-    it('module must be require-able', function () {
-        var error;
+    var miniargs;
 
-        try {
-            miniargs = require('../lib/index.js');
-        }
-        catch (e) {
-            error = e;
-        }
+    beforeEach(function () {
+        miniargs = require('../lib/index.js');
+    });
 
-        expect(error).to.not.be.ok();
-        expect(miniargs).to.be.ok();
-        expect(typeof miniargs).to.be('object');
+    afterEach(function () {
+        miniargs = null;
     });
 
     it('.parse() function must be available', function () {
@@ -66,6 +60,22 @@ describe('miniargs', function () {
     it('must allow hyphen between param name', function () {
         expect(miniargs.parse(['', '', '--param-name', 'value'])).to.eql({
             'param-name': 'value'
+        });
+    });
+
+    it('must accept multiple switches as an array', function () {
+        expect(miniargs.parse(['', '', '--param-name', 'value1', '--param-name', 'value2'])).to.eql({
+            'param-name': ['value1', 'value2']
+        });
+    });
+
+    it('must accept multiple switches as an array even with value-less one', function () {
+        expect(miniargs.parse(['', '', '--param-name', '--param-name', 'value2'])).to.eql({
+            'param-name': 'value2'
+        });
+        expect(miniargs.parse(['', '', '--param-name', 'value1', '--param-name', '--param2'])).to.eql({
+            'param-name': 'value1',
+            'param2': undefined
         });
     });
 });
