@@ -22,9 +22,9 @@
   "homepage": "https://github.com/shamasis/miniargs",
   "devDependencies": {
     "expect.js": "^0.3.1",
-    "istanbul": "^0.3.8",
-    "jscs": "^1.11.3",
+    "istanbul": "^0.4.5",
+    "jscs": "^3.0.7",
     "jshint": "^2.6.3",
-    "mocha": "^2.2.1"
+    "mocha": "^3.2.0"
   }
 }
